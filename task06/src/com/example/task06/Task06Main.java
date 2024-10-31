@@ -14,5 +14,4 @@ public class Task06Main {
         String callerMethodName = stackTrace[2].getMethodName();
         System.out.println(callerMethodName);
     }
-
 }
