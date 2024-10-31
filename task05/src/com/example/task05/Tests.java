@@ -34,8 +34,8 @@ public class Tests {
         String[] args = {"abcd"};
         try {
             Task05Main.main(args);
-            String actual = out.toString();
-            Assert.assertEquals("файл \"abcd\" не найден\n", actual);
+            String actual = out.toString().trim();Assert.assertEquals("файл \"abcd\" не найден\n", actual);
+
         } catch (Exception e) {
             if (e instanceof IOException) {
                 throw new AssertionError("метод main не должен бросать исключение IOException", e);
