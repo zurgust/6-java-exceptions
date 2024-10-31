@@ -1,15 +1,29 @@
 package com.example.task01;
 
+import java.sql.SQLOutput;
+
 public class Task01Main {
     public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        codeWithNPE();
-         */
+        try{
+            codeWithNPE();
+        }
+        catch(NullPointerException e){
+            System.out.println(e.getMessage());
+        }
     }
 
     static void codeWithNPE() {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
+        String s = null;
+        System.out.println(s.length()); //Попытка вызвать метод у неинициализированного объекта
+
+        Person person = null;
+        System.out.println(person.name);
+
+        int[] numbers = null;
+        System.out.println(numbers[0]);
     }
+}
+
+class Person {
+    String name;
 }
